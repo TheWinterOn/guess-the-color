@@ -1,0 +1,30 @@
+body {
+	background-color: #292d3e;
+}
+
+.square {
+	width: 30%;
+	background: #90959c;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	border-radius: 10%;
+}
+
+#container {
+	margin: 0 auto;
+	max-width: 600px;
+}
+
+h1 {
+	color: #d2dff7;
+	text-align: center;
+}
+
+#pickedColor {
+	font-size: 1.5em;
+}
+
+.hideSquare {
+	opacity: 0;
+}
