@@ -1,10 +1,11 @@
 body {
-	background-color: #292d3e;
+	background-color: #272d44;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .square {
 	width: 30%;
-	background: #90959c;
+	background: #d2dff7;
 	padding-bottom: 30%;
 	float: left;
 	margin: 1.66%;
@@ -12,6 +13,7 @@ body {
 }
 
 #container {
+	width: 100%;
 	margin: 0 auto;
 	max-width: 600px;
 }
@@ -19,12 +21,43 @@ body {
 h1 {
 	color: #d2dff7;
 	text-align: center;
+	font-size: 3em;
 }
 
 #pickedColor {
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 .hideSquare {
 	opacity: 0;
+}
+/*
+#buttonGroup {
+	font-size: 1.5em;
+	text-align: center;
+	max-width: 600px;
+	width: 100%;
+}
+
+#newGameButton .button {
+	margin: 1.66%;
+	width: 30%;
+}
+
+#gameChoiceButtons .button {
+	margin: 1.66% 1.66% 1.66% 1.66%;
+	width: 15%;
+}
+*/
+
+.button {
+	width: auto;
+	background: #d2dff7;
+	border: 1px solid lightslategray;
+	font-family: inherit;
+	float: left;
+}
+
+.selectedMode {
+	background-color: lawngreen;
 }
