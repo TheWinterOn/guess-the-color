@@ -5,30 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Game</title>
-    <link rel="stylesheet" href="ColorGame.css">
+    <link rel="stylesheet" href="colorGame.css">
 </head>
 
 <body>
     <h1>Guess the Color Game<br />
-        <div id="pickedColor">RGB</div>
+        <div id="picked-color">RGB</div>
     </h1>
 
+    <div class="flex-container">
+        <div id="button-menu">
+            <div>
+                <h3>Choose difficulty:</h3>
+            </div>
+            <div class="button">Easy</div>
+            <div class="button active">Normal</div>
+            <div class="button">Hard</div>
+        </div>
 
-    <div id="buttonGroup">
-        <div class="button">New Game</div>
-        <div class="button selectedMode">RGB</div>
-        <div class="button">HEX</div>
+        <div id="square-group">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
     </div>
-
-    <div id="container">
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-    </div>
-
     <script src="colorGame.js"></script>
 </body>
 

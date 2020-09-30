@@ -3,6 +3,55 @@ body {
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+h1 {
+	color: #d2dff7;
+	text-align: center;
+	font-size: 3em;
+	font-family: inherit;
+	word-break: normal;
+}
+
+h3 {
+	color: #d2dff7;
+	text-align: center;
+	font-size: 1em;
+	font-family: inherit;
+	margin: 0;
+	padding-bottom: 0.3em;
+}
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+#button-menu {
+	font-size: 1.5em;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 600px;
+	padding-bottom: 0.3em;
+}
+
+.button {
+	width: auto;
+	background-color: #272d44;
+	color:  #d2dff7;
+	border: 1px solid #d2dff7;
+	font-family: inherit;
+	float: left;
+	border-radius: 5%;
+	margin: 2px;
+}
+
+#square-group {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 600px;
+}
+
 .square {
 	width: 30%;
 	background: #d2dff7;
@@ -12,52 +61,15 @@ body {
 	border-radius: 10%;
 }
 
-#container {
-	width: 100%;
-	margin: 0 auto;
-	max-width: 600px;
-}
-
-h1 {
-	color: #d2dff7;
-	text-align: center;
-	font-size: 3em;
-}
-
-#pickedColor {
+#picked-color {
 	font-size: 1.2em;
 }
 
-.hideSquare {
+.hide-square {
 	opacity: 0;
 }
-/*
-#buttonGroup {
-	font-size: 1.5em;
-	text-align: center;
-	max-width: 600px;
-	width: 100%;
-}
 
-#newGameButton .button {
-	margin: 1.66%;
-	width: 30%;
-}
-
-#gameChoiceButtons .button {
-	margin: 1.66% 1.66% 1.66% 1.66%;
-	width: 15%;
-}
-*/
-
-.button {
-	width: auto;
-	background: #d2dff7;
-	border: 1px solid lightslategray;
-	font-family: inherit;
-	float: left;
-}
-
-.selectedMode {
-	background-color: lawngreen;
+.active {
+	background-color: #d2dff7;
+	color:  #272d44;
 }

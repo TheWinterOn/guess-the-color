@@ -3,7 +3,7 @@ FillColors(colors);
 
 var pickedColor = colors[Math.floor(Math.random() * 6)];
 
-var rgbText = document.getElementById("pickedColor");
+var rgbText = document.getElementById("picked-color");
 rgbText.textContent = pickedColor.toUpperCase(pickedColor);
 
 var buttonUpperLeft = document.getElementsByClassName("square")[0];
@@ -19,10 +19,9 @@ buttonLowerMiddle.style.backgroundColor = colors[4];
 var buttonLowerRight = document.getElementsByClassName("square")[5];
 buttonLowerRight.style.backgroundColor = colors[5];
 
-
-var buttonNewGame = document.getElementsByClassName("button")[0];
-var buttonRGB = document.getElementsByClassName("button")[1];
-var buttonHEX = document.getElementsByClassName("button")[2];
+var buttonEasy = document.getElementsByClassName("button")[0];
+var buttonNormal = document.getElementsByClassName("button")[1];
+var buttonHard = document.getElementsByClassName("button")[2];
 
 
 buttonUpperLeft.addEventListener("click", function () {
@@ -45,16 +44,20 @@ buttonLowerRight.addEventListener("click", function () {
 });
 
 
-buttonNewGame.addEventListener("click", function () {
-	newGame();
+buttonEasy.addEventListener("click", function () {
+	buttonEasy.classList.add("active");
+	buttonNormal.classList.remove("active");
+	buttonHard.classList.remove("active");
 });
-buttonRGB.addEventListener("click", function () {
-	buttonRGB.classList.add('selectedMode');
-	buttonHEX.classList.remove('selectedMode');
+buttonNormal.addEventListener("click", function () {
+	buttonEasy.classList.remove("active");
+	buttonNormal.classList.add("active");
+	buttonHard.classList.remove("active");
 });
-buttonHEX.addEventListener("click", function () {
-	buttonHEX.classList.add('selectedMode');
-	buttonRGB.classList.remove('selectedMode');
+buttonHard.addEventListener("click", function () {
+	buttonEasy.classList.remove("active");
+	buttonNormal.classList.remove("active");
+	buttonHard.classList.add("active");
 });
 
 
@@ -63,11 +66,10 @@ function checkAnswer(button) {
 		alert("Correct");
 		location.reload();
 	} else {
-		button.classList.add("hideSquare");
+		button.classList.add("hide-square");
 	}
 }
 
-function newGame() { }
 
 function getRandomColorRGB() {
 	var color = "rgb(";
@@ -76,21 +78,17 @@ function getRandomColorRGB() {
 		i < 2 ? (color += Math.floor(Math.random() * 256) + ", ") : (color += Math.floor(Math.random() * 256));
 	}
 	color += ")";
-	console.log(color);
 	return color;
 }
 
-function getRandomColorHex() {
-	var symbol = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
-	var color = "#";
 
-	for (var i = 0; i < 6; i++) {
-		color += symbol[Math.floor(Math.random() * 16)];
-	}
-	return color;
-}
+
 
 function FillColors(colors) {
 	for (var i = 0; i < 6; i++)
 		colors[i] = getRandomColorRGB();
 }
+
+
+
+
